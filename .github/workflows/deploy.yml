@@ -29,6 +29,13 @@ jobs:
         run: npm ci
       - name: Build Quartz
         run: npx quartz build
+      - name: Deploy to Cloudflare Pages
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+        continue-on-error: true
+        run: npx wrangler pages deploy public --project-name geo-cards
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
