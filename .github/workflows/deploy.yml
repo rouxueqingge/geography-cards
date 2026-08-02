@@ -35,8 +35,8 @@ jobs:
           path: public
       - name: Switch baseUrl for Cloudflare root domain
         run: |
-          sed -i 's#baseUrl: "rouxueqingge.github.io/geography-cards"#baseUrl: ""#' quartz.config.yaml
-      - name: Rebuild for Cloudflare (empty basePath)
+          sed -i 's#baseUrl: "rouxueqingge.github.io/geography-cards"#baseUrl: "geo-cards.pages.dev"#' quartz.config.yaml
+      - name: Rebuild for Cloudflare (root domain)
         run: rm -rf public && npx quartz build
       - name: Deploy to Cloudflare Pages
         continue-on-error: true
