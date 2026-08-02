@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: 张毅 · 地理卡片库
-  pageTitleSuffix: " | 高中地理教研卡片体系"
+  pageTitle: 高中地理卡片知识库
+  pageTitleSuffix: " | 高中地理卡片知识库"
   enableSPA: true
   enablePopovers: true
   analytics: null
@@ -203,7 +203,7 @@ plugins:
     enabled: true
     options:
       links:
-        "张毅地理教研": "https://github.com"
+        "微信：geofans 邮箱:rouxueqingge@126.com": "mailto:rouxueqingge@126.com"
     layout:
       position: footer
       priority: 50
